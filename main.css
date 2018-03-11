@@ -1,0 +1,227 @@
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(lightgray, white);    
+    overflow-x: hidden;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+/* Grid */
+#container {
+    /* z-index: 0; */
+    display: grid;
+    grid-template-columns: 5% 40% 10% 40% 5%;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    height: 100vh;
+    filter: blur(0px);
+    grid-template-areas: 
+    ". name_plate about_arrow about_arrow ."
+    ". name_plate blank full_stack ."
+    ". port_arrow port_arrow full_stack .";
+}
+
+#container.blurred {
+    filter: blur(15px);    
+}
+/* Name Plate */
+.name_plate {
+    grid-area: name_plate;
+    /* border: 1px solid black; */
+    text-align: right;
+    align-self: center;
+    font-size: 2em;
+}
+/* About Me Arrow */
+.about_arrow {
+    grid-area: about_arrow;
+    border: 1px solid black;
+}
+
+/* Blank Space */
+.blank {
+    grid-area: blank;
+    /* border: 1px solid black; */
+}
+/* Fortfolio Arrow */
+.port_arrow {
+    grid-area: port_arrow;
+    border: 1px solid black;
+}
+/* Full Stack Plate */
+.full_stack {
+    grid-area: full_stack;
+    /* border: 1px solid black; */
+    align-self: center;
+    font-size: 2em;
+}
+
+#container > div >h1 {
+    line-height: 0.9em;
+    font-family: sans-serif;
+}
+
+#about_button span {
+    display: inline-block;
+    transform: rotate(90deg);
+    font-size: 1.7em;
+    padding-top: 1.9em; 
+    color: white;
+
+}
+#port_button span {
+    display: inline-block;
+    transform: rotate(-90deg);
+    font-size: 1.7em;
+    padding-bottom: 4.5em;
+    color: white;
+}
+
+#port_button, #about_button {
+    height: 80%;
+    width: 3em;
+    align-self: center;
+    letter-spacing: 0.1em;
+    text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+    #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+}
+
+#port_button:focus, #about_button:focus {
+    outline: 0;
+}
+
+#port_button {
+    background-color: orange;
+}
+
+#about_button {
+    background-color: teal;
+}
+
+.button_flex {
+    position: absolute;
+    top: 35%;
+    height: 30%;
+    width: 20%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+/* Portfolio slider  */
+ /*  */
+  /*  */
+#port_container {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    transform: translateX(-100vw);
+    transition: 0.8s ease;
+    width: 89vw;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+}
+#port_container.port_shown {
+    transform: translateX(5vw);
+}
+
+#port_container > div {
+    flex: 1;        
+}
+#port_container > div * {
+    margin-top: 0.5em;
+}
+
+#port_container > div > p {
+    margin-top: 0;
+    max-width: 70%;
+}
+#port_container > div > img {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.first_work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+.second_work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.third_work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.forth_work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.fifth_work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.sixth_work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+/* About Me Slider
+ */
+ /*  */
+
+#about_container {
+    display: flex;
+    position: absolute;
+    top: 18%;
+    transform: translateX(100vw);
+    transition: 0.8s ease;
+    width: 89vw;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+}
+
+#about_container.about_shown {
+    transform: translateX(5vw);
+}
+
+#about_container .flex_row {
+    display: flex;
+    align-items: center;
+}
+
+#about_container h2 {
+    text-indent: 1em;
+}
+
+#about_container p {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+#profile_img {
+    margin-left: 2em;
+}
+
+#other_img {
+    margin-right: 1em;
+}
