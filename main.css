@@ -18,6 +18,7 @@ body {
     grid-auto-rows: 1fr;
     height: 100vh;
     filter: blur(0px);
+    /* transition: 1s; */
     grid-template-areas: 
     ". name_plate about_arrow about_arrow ."
     ". name_plate blank full_stack ."
@@ -37,9 +38,15 @@ body {
 }
 /* About Me Arrow */
 .about_arrow {
+    /* display: flex; */
     grid-area: about_arrow;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
+/* .about_arrow img {
+    transform: rotateX(180deg);    
+    height 100%;
+    width: 80%
+} */
 
 /* Blank Space */
 .blank {
@@ -49,7 +56,7 @@ body {
 /* Fortfolio Arrow */
 .port_arrow {
     grid-area: port_arrow;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 /* Full Stack Plate */
 .full_stack {
@@ -144,6 +151,9 @@ body {
     margin-left: 2em;
     margin-right: 2em;
 }
+#port_container h3 {
+    font-family: sans-serif;
+}
 .first_work {
     display: flex;
     flex-direction: column;
@@ -211,6 +221,7 @@ body {
 
 #about_container h2 {
     text-indent: 1em;
+    font-family: sans-serif;
 }
 
 #about_container p {
@@ -224,4 +235,8 @@ body {
 
 #other_img {
     margin-right: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    
 }
